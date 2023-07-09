@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            body {
+                background-image: url('images/background.gif');
+            }
+        </style>
+
+        <title>New?! website</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/guestbook.css">
+        <link id="themeStylesheet" rel="stylesheet" href="https://unpkg.com/98.css"/>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="window" id="guestbook-window">
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Guestbook
+                    </div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="window-body" id="music-body">
+                    <div class="forms">
+                        <form onsubmit="submitEntry(); return false;">
+                            <input type="text" id="name" placeholder="Name" required><br>
+                            <textarea id="comment" rows="4" placeholder="Comment" required></textarea><br>
+                            <button type="submit">Submit</button>
+                          </form>
+                    </div><hr>
+                    <div id="entries"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="javascript/firebase.js"></script>
+    </body>
+</html>

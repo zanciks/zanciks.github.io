@@ -1,0 +1,29 @@
+.container {
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.window-body, .title-bar-text, ul, li, a, form, input, textarea {
+    font-size: 16px;
+}
+
+.window {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.window-body {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+form {
+    text-align: center;
+}
+
+input[type="text"], textarea {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
