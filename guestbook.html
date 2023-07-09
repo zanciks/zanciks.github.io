@@ -1,44 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <style>
-            body {
-                background-image: url('images/background.gif');
-            }
-        </style>
+<head>
+  <style>
+    body {
+      background-image: url('images/background.gif');
+    }
+  </style>
 
-        <title>New?! website</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/guestbook.css">
-        <link id="themeStylesheet" rel="stylesheet" href="https://unpkg.com/98.css"/>
-
-    </head>
-    <body>
-        <div class="container">
-            <div class="window" id="guestbook-window">
-                <div class="title-bar">
-                    <div class="title-bar-text">
-                        Guestbook
-                    </div>
-                    <div class="title-bar-controls">
-                        <button aria-label="Close"></button>
-                    </div>
-                </div>
-                <div class="window-body" id="music-body">
-                    <div class="forms">
-                        <form onsubmit="submitEntry(); return false;">
-                            <input type="text" id="name" placeholder="Name" required><br>
-                            <textarea id="comment" rows="4" placeholder="Comment" required></textarea><br>
-                            <button type="submit">Submit</button>
-                          </form>
-                    </div><hr>
-                    <div id="entries"></div>
-                </div>
-            </div>
+  <title>New?! website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/guestbook.css">
+  <link id="themeStylesheet" rel="stylesheet" href="https://unpkg.com/98.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="window" id="guestbook-window">
+      <div class="title-bar">
+        <div class="title-bar-text">
+          Guestbook
         </div>
+        <div class="title-bar-controls">
+          <button aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-body" id="music-body">
+        <div class="forms">
+          <form onsubmit="submitEntry(); return false;">
+            <input type="text" id="name" placeholder="Name" required><br>
+            <textarea id="comment" rows="4" placeholder="Comment" required></textarea><br>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+        <hr>
+        <div id="entries"></div>
+      </div>
+    </div>
+  </div>
 
+  <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-database.js"></script>
+  <script src="javascript/firebase.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+    apiKey: "AIzaSyDxvgdcFCdB5UGZNQ_LF-B7HnVzXF9dYLY",
+    authDomain: "zanciks-b3d79.firebaseapp.com",
+    projectId: "zanciks-b3d79",
+    storageBucket: "zanciks-b3d79.appspot.com",
+    messagingSenderId: "131659056444",
+    appId: "1:131659056444:web:02771d26e05af0c3214a39",
+    measurementId: "G-DYV8V1MTMB"
+};
 
-        <script src="javascript/firebase.js"></script>
-    </body>
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    const entriesRef = firebase.database().ref('guestbook-entries');
+
+    function submitEntry() {
+      // Get name and comment from form inputs
+      const name = document.getElementById('name').value;
+      const comment = document.getElementById('comment').value;
+
+      // Create entry object
+      const entry = {
+        name: name,
+        comment: comment
+      };
+
+      // Push the entry to Firebase Realtime Database
+      entriesRef.push(entry);
+
+      // Reset the form
+      document.getElementById('name').value = '';
+      document.getElementById('comment').value = '';
+    }
+
+    function renderEntries(entries) {
+      const entriesContainer = document.getElementById('entries');
+      entriesContainer.innerHTML = '';
+
+      for (let i = entries.length - 1; i >= 0; i--) {
+        const entry = entries[i];
+        const entryElement = document.createElement('div');
+        entryElement.innerHTML = `<strong>${entry.name}</strong>: ${entry.comment}`;
+        entriesContainer.appendChild(entryElement);
+      }
+    }
+
+    function retrieveLastEntries() {
+      entriesRef.limitToLast(10).once('value', (snapshot) => {
+        const entries = [];
+        snapshot.forEach((childSnapshot) => {
+          entries.push(childSnapshot.val());
+        });
+        renderEntries(entries);
+      });
+    }
+
+    retrieveLastEntries();
+  </script>
+</body>
 </html>
