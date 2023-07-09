@@ -1,5 +1,3 @@
-console.log('Javscript is now running!');
-
 const playlist = [
     {title: 'Clair de Lune - Claude Debussy', src: 'music/song 1.mp3'},
     {title: 'Merry Go Round of Life - Joe Hisaishi', src: 'music/song 2.mp3'},
