@@ -26,8 +26,8 @@
             </div>
         </div>
         <div class="window-body">
-            <div class="forms">
-            <form onsubmit="submitEntry(); return false;">
+            <div id="guestbook-form" class="forms">
+            <form return false;">
                 <input type="text" id="name" placeholder="Name" required><br>
                 <textarea id="comment" rows="4" placeholder="Comment" required></textarea><br>
                 <button id="submit-button">Submit</button>
@@ -71,6 +71,9 @@
                 comment: document.getElementById("comment").value,
             }
             const entriesRef = push(ref(db), data);
+            alert("Your comment has been submitted!");
+            document.getElementById("name").value = '';
+            document.getElementById("comment").value = '';
         }
 
         console.log("test 3");
