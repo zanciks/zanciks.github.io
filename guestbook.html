@@ -30,8 +30,8 @@
             <form onsubmit="submitEntry(); return false;">
                 <input type="text" id="name" placeholder="Name" required><br>
                 <textarea id="comment" rows="4" placeholder="Comment" required></textarea><br>
+                <button id="submit-button">Submit</button>
             </form>
-            <button id="submit-button">Submit</button>
             </div>
             <hr>
             <div id="entries"></div>
@@ -58,7 +58,7 @@
         const analytics = getAnalytics(app);
         const db = getDatabase(app);
 
-        document.getElementById("submit-button").addEventListener('submit', function(e) {
+        document.getElementById("submit-button").addEventListener('click', function(e) {
             console.log("test 2");
             e.preventDefault();
             submit();
