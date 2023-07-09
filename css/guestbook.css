@@ -27,3 +27,27 @@ input[type="text"], textarea {
     padding: 10px;
     margin-bottom: 10px;
 }
+
+.entry {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+  
+.entry-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#entries {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.entry .entry-input,
+.entry .entry-textarea {
+    background-color: white !important;
+}
