@@ -1,0 +1,129 @@
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 0;
+        display: grid;
+        grid-template-rows: auto 1fr auto auto;
+        grid-row-gap: 10px;
+    }
+
+    .header,
+    .main-window,
+    .navigation,
+    .footer {
+        width: 97vw;
+        max-width: 97vw;
+    }
+
+    .header {
+        grid-row: 1;
+    }
+
+    .main-window {
+        grid-row: 2;
+        max-height: 50vh;
+    }
+
+    .navigation {
+        grid-row: 3;
+    }
+
+    .footer {
+        grid-row: 4;
+        margin-bottom: 143px;
+    }
+
+    .music-window {
+        position: fixed;
+        bottom: 0;
+        width: 97vw;
+        max-width: 97vw;
+        margin-bottom: 5px;
+    }
+
+    .window-body,
+    .title-bar-text,
+    ul,
+    li,
+    a {
+        font-size: 16px;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .date {
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+
+    .window {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .window-body {
+        flex-grow: 1;
+        overflow-y: auto;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: inherit;
+    }
+
+    #current-song {
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .marquee {
+        display: inline-block;
+        margin-right: 50px;
+        animation: marquee 11s linear infinite;
+    }
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(0%);
+        }
+        20% {
+            transform: translateX(0%);
+        }
+        55% {
+            transform: translateX(-200%);
+        }
+        55.00001% {
+            transform: translateX(200%);
+        }
+    }
+
+    #song-container {
+        width: 200px;
+        padding-bottom: 5px;
+    }
+
+    #music-body {
+        overflow: hidden;
+    }
+
+    #banners {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    #banners select {
+        margin-right: auto;
+        margin-left: 0;
+    }
+
+    #banners a {
+        margin: 0 5px;
+    }
+}

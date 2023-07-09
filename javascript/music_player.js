@@ -80,7 +80,7 @@ function changeName(newText) {
     container.classList.remove("marquee");
     currentSong.textContent = newText;
 
-    console.log(newText.length);
+    console.log(currentSong.offsetWidth);
 
     if (newText.length >= 40) {
         container.classList.add("marquee");
