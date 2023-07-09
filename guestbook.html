@@ -68,7 +68,7 @@
 
         const db = getDatabase(app);
 
-        document.getElementById("submit-button").addEventListener('submit', function(e) {
+        document.querySelector("form").addEventListener('submit', function(e) {
             e.preventDefault();
             set(ref(db, 'users/' + Math.random().toString(36).slice(2, 7)), {
                 name: document.getElementById("name").value,
@@ -76,7 +76,6 @@
             });
             alert("Your form has been submitted!");
             console.log("AJWGNKJEBJKSVBJKE");
-            document.getElementById("submit-button").reset();
         });
 
     </script>
