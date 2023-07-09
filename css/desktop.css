@@ -1,0 +1,112 @@
+@media screen and (min-width: 769px) {
+    .container {
+        margin-left: 100px;
+        margin-right: 100px;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: auto 1fr;
+        height: 97vh;
+        grid-row-gap: 10px;
+        grid-column-gap: 5px;
+    }
+    
+    .header {
+        grid-row: 1;
+        grid-column: 1 / span 2;
+    }
+    
+    .navigation {
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    .music-window {
+        grid-row: 3;
+        grid-column: 1;
+    }
+    
+    .main-window {
+        grid-row: 2 / span 2;
+        grid-column: 2;
+    }
+    
+    .footer {
+        grid-row: 4;
+        grid-column: 1 / span 2;
+    }
+
+    .window-body, .title-bar-text, ul, li, a {
+        font-size: 16px;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .date {
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 15px;
+    }
+
+    .window {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .window-body {
+        flex-grow: 1;
+        overflow-y: auto;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: inherit
+    }
+
+    #current-song {
+        overflow: hidden;
+        white-space: nowrap;
+    }
+      
+    .marquee {
+        display: inline-block;
+        margin-right: 50px;
+        animation: marquee 11s linear infinite;
+    }
+      
+    @keyframes marquee {
+        0% {transform: translateX(0%);}
+        20% {transform: translateX(0%);}
+        55% {transform: translateX(-200%);}
+        55.00001% {transform: translateX(200%);}
+    }
+
+    #song-container {
+        width: 200px;
+        padding-bottom: 5px;
+    }
+
+    #music-body {
+        overflow: hidden;
+    }
+    
+    #banners {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    #banners select {
+        margin-right: auto;
+        margin-left: 0;
+    }
+      
+    #banners a {
+        margin: 0 5px;
+    }
+}
