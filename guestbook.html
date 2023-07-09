@@ -42,7 +42,7 @@
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-analytics.js";
-        import { getDatabase } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-database.js";
+        import { getDatabase, push, ref } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-database.js";
         const firebaseConfig = {
             apiKey: "AIzaSyDxvgdcFCdB5UGZNQ_LF-B7HnVzXF9dYLY",
             authDomain: "zanciks-b3d79.firebaseapp.com",
@@ -71,9 +71,6 @@
                 comment: document.getElementById("comment").value,
             }
             const entriesRef = push(ref(db), data);
-            const entryKey = key(entriesRef);
-
-            console.log("new entry added with key: " + entryKey);
         }
 
         console.log("test 3");
