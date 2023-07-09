@@ -70,10 +70,16 @@
                 name: document.getElementById("name").value,
                 comment: document.getElementById("comment").value,
             }
-            const entriesRef = push(ref(db), data);
-            alert("Your comment has been submitted!");
-            document.getElementById("name").value = '';
-            document.getElementById("comment").value = '';
+
+            if (name != '' && comment != '') {
+                const entriesRef = push(ref(db), data);
+                alert("Your comment has been submitted!");
+                document.getElementById("name").value = '';
+                document.getElementById("comment").value = '';
+            } else {
+                alert("Please fill out all entries.");
+            }
+            
         }
 
         function getAllEntries() {
@@ -124,6 +130,7 @@
 
                     // Append the entry element to the entries container
                     entriesContainer.appendChild(entryElement);
+                    entryElement.appendChild(document.createElement('hr'));
                 });
             });
         }
