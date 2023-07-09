@@ -71,7 +71,7 @@
                 comment: document.getElementById("comment").value,
             }
 
-            if (name != '' && comment != '') {
+            if (name != '' || comment != '') {
                 const entriesRef = push(ref(db), data);
                 alert("Your comment has been submitted!");
                 document.getElementById("name").value = '';
