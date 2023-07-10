@@ -89,51 +89,56 @@
                 const entriesContainer = document.getElementById('entries');
                 entriesContainer.innerHTML = '';
 
+                // Reverse the snapshot array to load the newest entries first
+                const entries = [];
                 snapshot.forEach((childSnapshot) => {
-                    const entry = childSnapshot.val();
+                entries.unshift(childSnapshot.val());
+                });
 
-                    // Create entry element
-                    const entryElement = document.createElement('div');
-                    entryElement.classList.add('entry');
+                entries.forEach((entry) => {
+                // Create entry element
+                const entryElement = document.createElement('div');
+                entryElement.classList.add('entry');
 
-                    // Create label element for name
-                    const nameLabel = document.createElement('label');
-                    nameLabel.classList.add('entry-label');
-                    nameLabel.textContent = 'Name';
+                // Create label element for name
+                const nameLabel = document.createElement('label');
+                nameLabel.classList.add('entry-label');
+                nameLabel.textContent = 'Name';
 
-                    // Create input element for name
-                    const nameInput = document.createElement('input');
-                    nameInput.classList.add('entry-input');
-                    nameInput.type = 'text';
-                    nameInput.value = entry.name;
-                    nameInput.disabled = true;
+                // Create input element for name
+                const nameInput = document.createElement('input');
+                nameInput.classList.add('entry-input');
+                nameInput.type = 'text';
+                nameInput.value = entry.name;
+                nameInput.disabled = true;
 
-                    // Create label element for comment
-                    const commentLabel = document.createElement('label');
-                    commentLabel.classList.add('entry-label');
-                    commentLabel.textContent = 'Comment';
+                // Create label element for comment
+                const commentLabel = document.createElement('label');
+                commentLabel.classList.add('entry-label');
+                commentLabel.textContent = 'Comment';
 
-                    // Create textarea element for comment
-                    const commentTextarea = document.createElement('textarea');
-                    commentTextarea.classList.add('entry-textarea');
-                    commentTextarea.rows = 4;
-                    commentTextarea.value = entry.comment;
-                    commentTextarea.disabled = true;
+                // Create textarea element for comment
+                const commentTextarea = document.createElement('textarea');
+                commentTextarea.classList.add('entry-textarea');
+                commentTextarea.rows = 4;
+                commentTextarea.value = entry.comment;
+                commentTextarea.disabled = true;
 
-                    // Append name label and input to the entry element
-                    entryElement.appendChild(nameLabel);
-                    entryElement.appendChild(nameInput);
+                // Append name label and input to the entry element
+                entryElement.appendChild(nameLabel);
+                entryElement.appendChild(nameInput);
 
-                    // Append comment label and textarea to the entry element
-                    entryElement.appendChild(commentLabel);
-                    entryElement.appendChild(commentTextarea);
+                // Append comment label and textarea to the entry element
+                entryElement.appendChild(commentLabel);
+                entryElement.appendChild(commentTextarea);
 
-                    // Append the entry element to the entries container
-                    entriesContainer.appendChild(entryElement);
-                    entryElement.appendChild(document.createElement('hr'));
+                // Append the entry element to the entries container
+                entriesContainer.appendChild(entryElement);
+                entryElement.appendChild(document.createElement('hr'));
                 });
             });
-        }
+            }
+
         getAllEntries();
     </script>
     
