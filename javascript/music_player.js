@@ -78,11 +78,9 @@ function changeName(newText) {
     container.classList.remove("marquee");
     currentSong.textContent = newText;
 
-    console.log(currentSong.offsetWidth);
 
     if (newText.length >= 40) {
         container.classList.add("marquee");
-        console.log("Test");
     }
 }
 
