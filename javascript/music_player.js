@@ -3,6 +3,7 @@ const playlist = [
     {title: 'Merry Go Round of Life - Joe Hisaishi', src: 'music/song 2.mp3'},
     {title: 'Partita for Lute in C Minor, BWV 997, Prelude - J.S Bach', src: 'music/song 3.mp3'},
     {title: 'Save the Cat (from The Bad Guys) - Daniel Pemberton', src: 'music/song 4.mp3'},
+    {title: 'Cloud Symphony - Shook', src:'music/song 5.mp3'},
 ]
 
 let currentSongIndex = 0;
