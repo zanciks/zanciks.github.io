@@ -137,3 +137,7 @@ a {
        -moz-animation: rainbowanim 10s ease infinite;
             animation: rainbowanim 10s ease infinite;
 }
+
+html {
+    cursor: url('../images/cursors/xp_arrow.cur'), default;
+}
