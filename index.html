@@ -238,6 +238,7 @@
                                 <option value="https://unpkg.com/98.css"> 98.css </option>
                                 <option value="https://unpkg.com/xp.css"> XP.css </option>
                             </select>                            
+                            <fieldset>Number of visitors: <div id="stats"></div></fieldset>
                             <a href="https://tamanotchi.world/5191c"><img src="https://tamanotchi.world/i/5191" alt="It's tamaNOTchi! Click to feed!"></a>
                             <a href="https://zanciks.online" title="my website!!"><image src="images/banner.png"></image></a>
                             <a href="https://steamcommunity.com/id/Zanciks" title="add me on steam!"><image src="images/steam_banner.gif"></image></a>
@@ -255,6 +256,14 @@
         <script src="javascript/music_player.js"></script>
         <script src="javascript/themes.js"></script>
         <script data-goatcounter="https://zanciks.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+        <script>
+            var r = new XMLHttpRequest();
+            r.addEventListener('load', function() {
+                document.querySelector('#stats').innerText = JSON.parse(this.responseText).count
+            })
+            r.open('GET', 'https://zanciks.goatcounter.com/counter/' + encodeURIComponent(location.pathname) + '.json')
+            r.send()
+        </script>
 
     </body>
 </html>
