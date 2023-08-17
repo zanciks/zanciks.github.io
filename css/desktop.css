@@ -141,3 +141,7 @@ a {
 html {
     cursor: url('../images/cursors/xp_arrow.cur'), default;
 }
+
+a, select, iframe, button, field-row {
+    cursor: url('../images/cursors/xp_link.cur'), pointer;
+}
