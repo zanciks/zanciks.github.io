@@ -1,0 +1,8 @@
+Today I have uploaded this website. I'm pretty happy to see it working finally. It takes a long 
+time for the updates to go live, thanks to github.
+<br><br>That being said, github is also the reason I get to have a completely free website, 
+so I suppose its not all that bad.
+<br><br>I'd like to try and figure out how to make the windows dragable, so that they could be moved. 
+I had a small attempt at this, but I failed to make it happen. I'll probably try it again at some 
+point in the future, but not today. I think it'd be a cool feature, but oh well.
+<br><br>Anyway, thanks for reading my blog today. I'm sure I'll add more to it in the f

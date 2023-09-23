@@ -1,0 +1,94 @@
+.window-body, .title-bar-text, ul, li, a, button {
+    font-size: 16px;
+}
+
+#welcome {
+    margin-top: 10%;
+    margin-left: 10%;
+    max-width: 15%;
+}
+
+#blog-posts {
+    margin-top: -2%;
+    margin-left: 80%;
+    max-width: 15%;
+}
+
+.music-window {
+    position: fixed;
+    top: 81.5%; 
+    margin-left: 0vw; 
+    max-height: 80vh; 
+    overflow-y: auto;
+    z-index: 999;
+}
+
+
+.window-body {
+    flex-grow: 0.2;
+    overflow-y: auto;
+    max-height: 60vh;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#blog-window-container {
+    position: fixed;
+    top: 40%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 60vw; 
+    max-height: 80vh; 
+    overflow-y: auto;
+    z-index: 999;
+}
+
+html {
+    cursor: url('../images/cursors/xp_arrow.cur'), default;
+}
+
+a, select, iframe, button, field-row {
+    cursor: url('../images/cursors/xp_link.cur'), pointer;
+}
+
+@-webkit-keyframes rainbowanim {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes rainbowanim {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes rainbowanim { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.rainbow {
+    text-align: center;
+    background: linear-gradient(90deg,#FF0000,#FF7F00,#FFFF00,#00FF00,#0000FF,#4B0082,#8B00FF);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400% 400%;
+    
+    -webkit-animation: rainbowanim 10s ease infinite;
+       -moz-animation: rainbowanim 10s ease infinite;
+            animation: rainbowanim 10s ease infinite;
+}
+
+#blog-buttons {
+    text-align: center; 
+
+}
+
+#blog-buttons button {
+    width: 100%
+}
