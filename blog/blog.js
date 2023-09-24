@@ -57,5 +57,5 @@ function getBlogFilePath(year, month, day) {
     const formattedYear = year.toString();
     const formattedMonth = (month).toString().padStart(2, '0');
     const formattedDay = day.toString().padStart(2, '0');
-    return `../blogs/${formattedYear}.${formattedMonth}.${formattedDay}.txt`;
+    return `../blog/blog-posts/${formattedYear}.${formattedMonth}.${formattedDay}.txt`;
 }
