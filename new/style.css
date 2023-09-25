@@ -1,9 +1,11 @@
 #container {
     grid-template-columns: 0.5fr 1fr 108px;
+    grid-template-rows: 0fr 1fr 0fr;
     margin-right: 100px;
     margin-left: 100px;
     display: grid;
     grid-gap: 10px;
+    height: 97vh;
 }
 
 #window-title {
@@ -45,4 +47,47 @@
 #window-updates-body {
     text-align: left;
     padding: 5px;
+}
+
+.button-container {
+    margin: -1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.music-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 100%
+}
+
+#current-song {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#song-container {
+    margin: 5px;
+    padding-bottom: 5px;
+    width: 15em;
+    white-space: nowrap;
+}
+
+.marquee {
+    display: inline-block;
+    animation: marquee 15s linear infinite;
+}
+  
+@keyframes marquee {
+    0% {transform: translateX(0%);}
+    50% {transform: translateX(0%);}
+    75% {transform: translateX(-200%);}
+    75.00001% {transform: translateX(200%);}
+}
+
+#window-music-titlebar {
+    overflow: hidden;
 }

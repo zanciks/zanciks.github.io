@@ -88,3 +88,4 @@ function changeName(newText) {
 
 changeName("Paused. Press play to start.")
 audioPlayer.src = playlist[currentSongIndex].src;
+progress.value = 0;   

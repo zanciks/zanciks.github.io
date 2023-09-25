@@ -27,6 +27,7 @@
                 <div class="window-body">
                     <a href="https://zanciks.online/blog">blog</a> <br>
                     <a href="https://zanciks.online">old site</a> <br>
+                    <a href="https://zanciks.online/pages/toast.html">toast</a> <br>
                     <a>guestbook (wip)</a>
                 </div>
             </div>
@@ -37,6 +38,9 @@
                 </div>
                 <div class="window-body" id="window-updates-body">
                     2023 September 25 <br>
+                    I have got the music player working! It doesn't look perfect yet, but I hope you all find it satisfactory!
+                    <hr>
+                    2023 September 24 <br>
                     Welcome to the new zanciks.online website! I am attempting to use a new theme which I have made on my own. It isn't perfect, but I am hoping to improve it with time. On the left side, I have added a place for you to view my blog, the old website, and hopefully soon, a guestbook. If you want to use the chatbox, the old site is probably best for now. I'm not sure where it should go on this page. 
                 </div>
             </div>
@@ -57,11 +61,22 @@
             </div>
 
             <div class="window" id="window-music">
-                <div class="window-titlebar">
-                    Window title!
+                <div class="window-titlebar" id="window-music-titlebar">
+                    <div id="song-container">
+                        <span id="current-song">JAVASCRIPT NOT CURRENT WORKING</span>
+                    </div>
                 </div>
-                <div class="window-body">
-                    music player wip
+                <div class="window-body" id="window-body-music">
+                    <div class="button-container">
+                        <button class="music-button" enabled onclick="previous()">   << </button>
+                        <button class="music-button" enabled onclick="togglePlay()"> || </button>
+                        <button class="music-button" enabled onclick="next()">       >> </button>
+                    </div>
+                    <div class="button-container">
+                        <button class="music-button" disabled> <progress id="progress-bar" max="100" value="100"></progress> </button>
+                        <button class="music-button" disabled> <div class="field-row"> <input class="custom-range" id="range" type="range" min="0" max="100" value="100" step="1"> </div> </button>
+                    </div>
+
                 </div>
             </div>
 
@@ -69,6 +84,7 @@
 
         <audio id="audio-player"></audio>
         <script src="../javascript/music_player.js"></script>
+        <script src="../javascript/smarquee.js" type="module"></script>
 
     </body>
 </html>

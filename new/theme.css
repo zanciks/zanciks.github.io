@@ -36,3 +36,19 @@ a {
 hr {
     color: white;
 }
+
+button {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    margin: 0px;
+}
+
+
+progress {
+    accent-color: white;
+}
+
+.custom-range {
+    accent-color: white;
+}
