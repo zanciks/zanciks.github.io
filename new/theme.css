@@ -1,0 +1,38 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.window, .window-titlebar, .window-body {
+    font-size: 20px;
+}
+
+.window {
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-transform: lowercase;
+}
+
+.window-titlebar {
+    border: 1px solid white;
+    margin: 5px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.window-body {
+    border: 1px solid white;
+    margin: 5px;
+    flex-grow: 1;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit
+}
+
+hr {
+    color: white;
+}
