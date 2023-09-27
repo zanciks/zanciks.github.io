@@ -78,7 +78,7 @@
 
 .marquee {
     display: inline-block;
-    animation: marquee 15s linear infinite;
+    animation: marquee 10s linear infinite;
 }
   
 @keyframes marquee {
@@ -89,5 +89,17 @@
 }
 
 #window-music-titlebar {
+    overflow: hidden;
+}
+
+.music-button-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    max-width: 100%
+}
+
+#window-body-music {
     overflow: hidden;
 }
