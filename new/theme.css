@@ -63,7 +63,8 @@ progress[value]::-webkit-progress-value {
 }
 
 input[type=range] {
-    -webkit-appearance: none; 
+    -webkit-appearance: none;
+    appearance: none;
     width: 100%;
     background: transparent; 
 }
