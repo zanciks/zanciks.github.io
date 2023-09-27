@@ -37,6 +37,9 @@
                     UPDATES
                 </div>
                 <div class="window-body" id="window-updates-body">
+                    2023 September 26
+                    I fixed the volume slider and the progress bar for the music player to look a bit better for the theme of the website! I haven't tested any of this on other browsers though. If you're not on a chromium based browser; sorry!
+                    <hr>
                     2023 September 25 <br>
                     I have got the music player working! It doesn't look perfect yet, but I hope you all find it satisfactory!
                     <hr>
@@ -73,8 +76,10 @@
                         <button class="music-button" enabled onclick="next()">       >> </button>
                     </div>
                     <div class="button-container">
-                        <button class="music-button" disabled> <progress id="progress-bar" max="100" value="100"></progress> </button>
-                        <button class="music-button" disabled> <div class="field-row"> <input class="custom-range" id="range" type="range" min="0" max="100" value="100" step="1"> </div> </button>
+                        <div class="progress-container">
+                            <button class="music-button" disabled> <progress id="progress-bar" max="100" value="100"></progress> </button>
+                        </div>
+                        <button class="music-button" disabled> <div class="field-row"> <input id="range" type="range" min="0" max="100" value="100" step="1"> </div> </button>
                     </div>
 
                 </div>
