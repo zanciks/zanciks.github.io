@@ -103,3 +103,7 @@
 #window-body-music {
     overflow: hidden;
 }
+
+#stats {
+    color: var(--secondary-color);
+}
