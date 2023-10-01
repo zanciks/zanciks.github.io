@@ -3,6 +3,12 @@
     --secondary-color: white;
 }
 
+fieldset {
+    font-size: 16px;
+    padding: 0;
+    margin: 5px;
+    border: 1px solid var(--secondary-color);
+}
 
 body {
     background-color: var(--primary-color);
@@ -11,10 +17,6 @@ body {
 
 .window, .window-titlebar, .window-body {
     font-size: 20px;
-}
-
-fieldset text {
-    font-size: 10px;
 }
 
 .window {
@@ -99,4 +101,15 @@ input[type=range]::-webkit-slider-runnable-track {
     background: var(--primary-color);
     border-radius: 1.3px;
     border: 1px solid var(--secondary-color);
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+    background-color: var(--primary-color);
+    border: 1px solid var(--secondary-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--primary-color);
 }
