@@ -1,21 +1,13 @@
 function toggleColorInversion() {
-    const elementsToInvert = document.querySelectorAll(
-        'body, .window, .window-titlebar, .window-body, a, hr, button'
-    );
+    const currentPrimaryColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-color').trim();
 
-    elementsToInvert.forEach((element) => {
-        if (element.style.backgroundColor === 'white') {
-            element.style.backgroundColor = 'black';
-            element.style.color = 'white';
-            element.style.borderColor = 'white';
-            element.style.background = 'black';
-        } else {
-            element.style.backgroundColor = 'white';
-            element.style.color = 'black';
-            element.style.borderColor = 'black';
-            element.style.background = 'white';
-        }
-    });
+    if (currentPrimaryColor === 'black') {
+        document.documentElement.style.setProperty('--primary-color', 'white');
+        document.documentElement.style.setProperty('--secondary-color', 'black');
+    } else {
+        document.documentElement.style.setProperty('--primary-color', 'black');
+        document.documentElement.style.setProperty('--secondary-color', 'white');
+    }
 }
 
 document.getElementById('color-invert-button').addEventListener('click', toggleColorInversion);
