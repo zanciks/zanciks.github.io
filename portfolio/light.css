@@ -1,4 +1,9 @@
-.bulb-container{
+/* 
+  I have adapted this from an animation found on codepen.io. I've tried to update it enough to make it my own though.
+  I have both removed some animation, and added my own. 
+*/
+
+.light-container {
     position: fixed;
     top: 0;
     right: 0;
@@ -11,7 +16,7 @@
     margin-top: -10%;
 }
 
-.wire{
+.cable {
     width: 4px;
     height: 250px;
     background: black;
@@ -20,7 +25,7 @@
     z-index: 1;
 }
 
-.connector{
+.connector {
     background: #292929;
     width: 30px;
     aspect-ratio: 4/5;
@@ -32,14 +37,14 @@
     z-index: 2;
 }
 
-.grove{
+.grove {
     background: #424242;
     width: 34px;
     height: 3px; 
     z-index: 3;
 }
 
-.bulb{
+.light{
     margin-top: -2px;
     width: 92px;
     aspect-ratio: 1;
@@ -52,12 +57,12 @@
     justify-content: flex-start;
     gap: -1px;
     z-index: 1;
-    animation: flash 10s linear infinite;
+    animation: wave 10s linear infinite;
     background: rgba(255,235,0,1);
 }
 
 
-@keyframes flash{
+@keyframes wave {
     0%{
       box-shadow: 0px 0px 75px 30px rgba(245,223,77,1);
     }

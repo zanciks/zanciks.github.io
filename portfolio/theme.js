@@ -12,4 +12,4 @@ function cycleTheme() {
     }
 }
 
-document.getElementById('bulb-button').addEventListener('click', cycleTheme);
+document.getElementById('light-button').addEventListener('click', cycleTheme);
