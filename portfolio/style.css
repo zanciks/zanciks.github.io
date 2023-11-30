@@ -1,0 +1,17 @@
+.project {
+    width:  50vh;
+    height: 50vh;
+    border: 2px solid var(--secondary-color);
+}
+
+#chess-engine {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.project-link {
+    margin-top: auto;
+    margin-bottom: 5%;
+}
