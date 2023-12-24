@@ -27,8 +27,19 @@
                 <div class="window-body">
                     <a href="../blog">old blog</a> <br>
                     <a href="../old">old site</a> <br>
-                    <a href="../toast">toast</a> <br>
-                    <a>guestbook (wip)</a>
+                    
+                    <label for="radio-button">live chatbox</label>
+                    <input type="checkbox" id="radio-button"> <br>
+                    
+                    <div class="window" id="window-radio">
+                        <div class="window-titlebar">
+                            chatbox
+                        </div>
+                        <div class="window-body">
+                            <script id="cid0020000364366923002" data-cfasync="false" async src="https://st.chatango.com/js/gz/emb.js" style="width: 100%;height: 100%;">{"handle";"zanciks-online","arch";"js","styles";{"a";"000000","b";100,"c";"ffffff","d";"FFFFFF","e";"000000","g";"ffffff","h";"000000","j";"ffffff","k";"000000","l";"000000","m";"000000","n";"FFFFFF","p";"10","q";"000000","r";100,"t";0,"ab";false,"usricon";0,"surl";0,"allowpm";0}}</script>
+                        </div>
+                    </div> 
+
                 </div>
             </div>
 
@@ -105,6 +116,8 @@
 
         </div>
 
+        
+
         <audio id="audio-player"></audio>
         <script src="../home/music_player.js"></script>
         <script src="../home/theme.js"></script>
@@ -117,6 +130,5 @@
             r.open('GET', 'https://zanciks.goatcounter.com/counter/%2Fhome.json')
             r.send()
         </script>
-
     </body>
 </html>

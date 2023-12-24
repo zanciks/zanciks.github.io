@@ -107,3 +107,27 @@
 #stats {
     color: var(--secondary-color);
 }
+
+#window-radio {
+    visibility: hidden;
+}
+
+#radio-button:checked ~ #window-radio {
+    visibility: visible;
+    position: absolute
+}
+
+#window-radio {
+    z-index: 9999; /* Set a high z-index to make it appear above other elements */
+    position: fixed;
+    top: 30%;
+    left: 30%;
+    right: 30%;
+    bottom: 30%;
+    background-color: var(--primary-color);
+}
+
+#radio-button {
+    position: absolute;
+    left: -100vw;
+}

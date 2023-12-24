@@ -42,7 +42,7 @@ body {
     overflow-y: auto;
 }
 
-a {
+a, label {
     color: inherit;
     text-decoration: underline
 }
