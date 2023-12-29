@@ -64,11 +64,6 @@
     width: 100%
 }
 
-#current-song {
-    overflow: hidden;
-    white-space: nowrap;
-}
-
 #song-container {
     margin: 5px;
     padding-bottom: 5px;
