@@ -1,5 +1,3 @@
-import { Smarquee } from "../node_modules/smarquee/dist";
-
 const playlist = [
     {title: 'Clair de Lune - Claude Debussy', src: '../music/song 1.mp3'},
     {title: 'Merry Go Round of Life - Joe Hisaishi', src: '../music/song 2.mp3'},
@@ -13,7 +11,7 @@ let currentSongIndex = 0;
 const audioPlayer = document.getElementById('audio-player');
 const progress = document.getElementById('progress-bar');
 const volumeRange = document.getElementById('range');
-const currentSong = document.getElementById('smarquee');
+const currentSong = document.getElementById('current-song');
 const container = document.getElementById('song-container');
 
 audioPlayer.addEventListener('ended', () => {
@@ -87,9 +85,6 @@ function changeName(newText) {
         container.classList.add("marquee");
     }
 }
-
-let smarquee = new Smarquee();
-smarquee.init();
 
 changeName("Paused. Press play to start.")
 audioPlayer.src = playlist[currentSongIndex].src;
