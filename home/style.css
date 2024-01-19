@@ -71,18 +71,6 @@
     white-space: nowrap;
 }
 
-.marquee {
-    display: inline-block;
-    animation: marquee 10s linear infinite;
-}
-  
-@keyframes marquee {
-    0% {transform: translateX(0%);}
-    50% {transform: translateX(0%);}
-    75% {transform: translateX(-200%);}
-    75.00001% {transform: translateX(200%);}
-}
-
 #window-music-titlebar {
     overflow: hidden;
 }

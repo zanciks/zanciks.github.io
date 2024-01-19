@@ -82,7 +82,7 @@ function changeName(newText) {
 
 
     if (newText.length >= 40) {
-        container.classList.add("marquee");
+        // container.classList.add("marquee");
     }
 }
 
