@@ -83,6 +83,7 @@ function changeName(newText) {
 
     if (newText.length >= 40) {
         // container.classList.add("marquee");
+        // we're getting rid of the marquee for now. can't get it to work well
     }
 }
 
