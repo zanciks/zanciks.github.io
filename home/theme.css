@@ -51,11 +51,15 @@ hr {
     border-color: var(--secondary-color);
 }
 
-button {
+button, .form-element short, .form-element, .form-button {
     background-color: var(--primary-color);
     color: var(--secondary-color);
     border: 1px solid var(--secondary-color);
     margin: 0px;
+}
+
+.form-element short, .form-element {
+    margin: 3px;
 }
 
 progress[value] {

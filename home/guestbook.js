@@ -34,4 +34,11 @@ function encodeHTML(santizedInput) {
     return santizedInput.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
 }
 
+function submitForm() {
+    var frm = document.getElementsByName('gform')[0];
+    frm.submit(); 
+    frm.reset(); 
+    return false;
+ }
+
 window.onload = fetchGuestBookEntries();

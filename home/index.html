@@ -46,11 +46,11 @@
                                 submit new entry
                             </div>
                             <div class="window-body" id="guestbook-submission-body">
-                                <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdBSJXJruGc53vYKuyR2qWrkYEozTPLl9vve4sGBq-5IXoyWA/formResponse?usp=pp_url&entry.739506884=Anon&entry.692672684=Entry+Description" target="hidden_iframe" onsubmit="submitted=true;">
-                                    <input class="form-element short" type="text" name="entry.739506884" id="entry.739506884" placeholder="Anon" required> <br>
-                                    <textarea class="form-element" name="entry.692672684" id="entry.692672684" maxlength="500" placeholder="Entry here" required></textarea> <br>
+                                <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdBSJXJruGc53vYKuyR2qWrkYEozTPLl9vve4sGBq-5IXoyWA/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+                                    <input class="form-element" type="text" name="entry.739506884" id="entry.739506884" placeholder="Anon" required> <br>
+                                    <textarea class="form-element" name="entry.692672684" id="entry.692672684" maxlength="500" rows="10" cols="50" style="resize: none;" placeholder="Entry here" required></textarea> <br>
                                     
-                                    <input class="form-button" type="submit" value="Submit">
+                                    <input type="button" class="form-button" value="Submit" id="btnsubmit" onclick="submitForm()">
                                     <input class="form-button" type="reset" value="Reset Form">
                                 </form>
                             </div>
@@ -148,6 +148,8 @@
 
                 </div>
             </div>
+
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>	
 
         </div>
 
