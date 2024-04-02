@@ -103,14 +103,55 @@
 #window-radio {
     z-index: 9999; /* Set a high z-index to make it appear above other elements */
     position: fixed;
-    top: 30%;
-    left: 30%;
-    right: 30%;
-    bottom: 30%;
+    top: 15%;
+    left: 15%;
+    right: 15%;
+    bottom: 15%;
     background-color: var(--primary-color);
+    display: flex;
 }
 
 #radio-button {
     position: absolute;
     left: -100vw;
+}
+
+#guestbook-window,
+#guestbook-submission {
+    flex: 1;
+}
+
+.guestbook-entry-info {
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    margin: 0;
+}
+
+.guestbook-author {
+    text-align: left;
+    margin: 0;
+}
+
+.guestbook-date {
+    text-align: right;
+    margin: 0;
+}
+
+.guestbook-text {
+    font-size: 18px;
+    text-align: left;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    margin: 0;
+    margin-top: 0;
+}
+
+#guestbook-submission-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }

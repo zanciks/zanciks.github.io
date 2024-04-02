@@ -29,17 +29,33 @@
                     <a href="../old">old site</a> <br>
                     <a href="../toast">toast</a> <br>
                     
-                    <label for="radio-button">live chatbox (disable adblock!)</label>
+                    <label for="radio-button">Guestbook</label>
                     <input type="checkbox" id="radio-button"> <br>
                     
-                    <div class="window" id="window-radio">
-                        <div class="window-titlebar">
-                            chatbox
+                    <div id="window-radio">
+                        <div class="window" id="guestbook-window">
+                            <div class="window-titlebar">
+                                guestbook entries
+                            </div>
+                            <div class="window-body">
+                                <div id="guestbook-json" class="guestbook"></div>
+                            </div>
+                        </div> 
+                        <div class="window" id="guestbook-submission">
+                            <div class="window-titlebar">
+                                submit new entry
+                            </div>
+                            <div class="window-body" id="guestbook-submission-body">
+                                <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdBSJXJruGc53vYKuyR2qWrkYEozTPLl9vve4sGBq-5IXoyWA/formResponse?usp=pp_url&entry.739506884=Anon&entry.692672684=Entry+Description" target="hidden_iframe" onsubmit="submitted=true;">
+                                    <input class="form-element short" type="text" name="entry.739506884" id="entry.739506884" placeholder="Anon" required> <br>
+                                    <textarea class="form-element" name="entry.692672684" id="entry.692672684" maxlength="500" placeholder="Entry here" required></textarea> <br>
+                                    
+                                    <input class="form-button" type="submit" value="Submit">
+                                    <input class="form-button" type="reset" value="Reset Form">
+                                </form>
+                            </div>
                         </div>
-                        <div class="window-body">
-                            <script src="./chatbox.js"></script>
-                        </div>
-                    </div> 
+                    </div>
 
                 </div>
             </div>
@@ -49,6 +65,9 @@
                     UPDATES
                 </div>
                 <div class="window-body" id="window-updates-body">
+                    2024 April 2 (part 2) <br>
+                    I'm at work and I'm bored. I've been working on adding a new guestbook, instead of the chatbox. This one will be hosted via google forms. Hopefully its usable for yall? Please let me know. If you can't, I'm @zanciks on discord.
+                    <hr>
                     2024 April 2 <br>
                     Hi everybody. I haven't posted in a very long time. I recently turned 20 (back in late February, actually). On top of that, I've just been trying to get things figured out in my life. Things are getting more stable for me now, which is quite nice. I've been trying to find a better job recently, but sadly nobody wants to hire me. I'm just working on making things better. I've been thinking about my old cat, Toast, quite a bit. Most nights I go to bed thinking about her. Some nights I weep. Some nights I'm happy that I had her. Most nights I don't know how to feel. I hope I can feel better someday soon. I don't have much else to report. Everything is pretty much the same. I am about to hit 1 year on HRT, which is pretty cool! I'm excited about that. 
                     <hr>
@@ -135,6 +154,7 @@
         <audio id="audio-player"></audio>
         <script src="../home/music_player.js"></script>
         <script src="../home/theme.js"></script>
+        <script src="../home/guestbook.js"></script>
         <script data-goatcounter="https://zanciks.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
         <script>
             var r = new XMLHttpRequest();
