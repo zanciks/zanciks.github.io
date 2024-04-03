@@ -29,9 +29,9 @@
                     <a href="../old">old site</a> <br>
                     <a href="../toast">toast</a> <br>
                     
-                    <label for="radio-button">Guestbook</label>
-                    <input type="checkbox" id="radio-button"> <br>
-                    
+                    <label for="open-guestbook">guestbook</label> <br>
+                    <button id="open-guestbook" style="visibility: hidden;" onclick="toggleWindow()"></button>
+
                     <div id="window-radio">
                         <div class="window" id="guestbook-window">
                             <div class="window-titlebar">
@@ -42,16 +42,18 @@
                             </div>
                         </div> 
                         <div class="window" id="guestbook-submission">
-                            <div class="window-titlebar">
+                            <div class="window-titlebar" id="guestbook-submittion-titlebar">
                                 submit new entry
+                                <label for="close-guestbook">[CLOSE]</label> <br>
+                                <button id="close-guestbook" style="visibility: hidden;" onclick="toggleWindow()"></button>
                             </div>
                             <div class="window-body" id="guestbook-submission-body">
                                 <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdBSJXJruGc53vYKuyR2qWrkYEozTPLl9vve4sGBq-5IXoyWA/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
-                                    <input class="form-element" type="text" name="entry.739506884" id="entry.739506884" placeholder="Anon" required> <br>
-                                    <textarea class="form-element" name="entry.692672684" id="entry.692672684" maxlength="500" rows="10" cols="50" style="resize: none;" placeholder="Entry here" required></textarea> <br>
+                                    <input class="form-element" type="text" name="entry.739506884" id="entry.739506884" placeholder="anon" required> <br>
+                                    <textarea class="form-element" name="entry.692672684" id="entry.692672684" maxlength="500" rows="10" cols="50" style="resize: none;" placeholder="entry here" required></textarea> <br>
                                     
-                                    <input type="button" class="form-button" value="Submit" id="btnsubmit" onclick="submitForm()">
-                                    <input class="form-button" type="reset" value="Reset Form">
+                                    <input type="button" class="form-button" value="submit" id="btnsubmit" onclick="submitForm()">
+                                    <input class="form-button" type="reset" value="reset form">
                                 </form>
                             </div>
                         </div>

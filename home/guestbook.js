@@ -39,6 +39,15 @@ function submitForm() {
     frm.submit(); 
     frm.reset(); 
     return false;
- }
+}
+
+function toggleWindow() {
+    var windowRadio = document.getElementById("window-radio");
+    if (windowRadio.style.visibility === "visible") {
+        windowRadio.style.visibility = "hidden";
+    } else {
+        windowRadio.style.visibility = "visible";
+    }
+}
 
 window.onload = fetchGuestBookEntries();

@@ -155,3 +155,12 @@
     align-items: center;
     text-align: center;
 }
+
+#open-guestbook {
+    border: 0px solid var(--secondary-color);
+    margin: 0px;
+}
+
+#close-guestbook {
+    padding-left: 100%
+}
