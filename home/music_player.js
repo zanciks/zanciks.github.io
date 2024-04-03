@@ -13,6 +13,7 @@ const progress = document.getElementById('progress-bar');
 const volumeRange = document.getElementById('range');
 const currentSong = document.getElementById('current-song');
 const container = document.getElementById('song-container');
+const pausePlay = document.getElementById('pause-play');
 
 audioPlayer.addEventListener('ended', () => {
     currentSongIndex++;
