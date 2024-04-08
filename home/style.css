@@ -132,12 +132,16 @@
 
 .guestbook-author {
     text-align: left;
-    margin: 0;
+    margin: 2px;
+    padding-top: 2px;
+    padding-bottom: 5px;
 }
 
 .guestbook-date {
     text-align: right;
-    margin: 0;
+    margin: 2px;
+    padding-top: 2px;
+    padding-bottom: 5px;
 }
 
 .guestbook-text {
@@ -163,4 +167,23 @@
 
 #close-guestbook {
     padding-left: 100%
+}
+
+#submitted-text-container {
+    display: block;
+}
+
+#guestbook-window-body, #window-body-music {
+    background-size: 100% 100%;
+    background: repeating-linear-gradient(
+        45deg,
+        var(--secondary-color),
+        var(--secondary-color) 5px,
+        var(--primary-color) 5px,
+        var(--primary-color) 10px
+     );
+}
+
+.guestbook {
+    background: var(--primary-color)
 }

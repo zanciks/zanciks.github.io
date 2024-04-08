@@ -13,15 +13,11 @@ function fetchGuestBookEntries() {
                 document.getElementById("guestbook-json").innerHTML += `
                     <div class="guestbook-entry">
                         <div class="guestbook-entry-info">
-                            <p>
-                                <span class="guestbook-author">${SantizeName}</span>
-                            </p>
-                            <p>
-                                <span class="guestbook-date">${date}</span>
-                            </p>
+                            <span class="guestbook-author">${SantizeName}</span>
+                            <span class="guestbook-date">${date}</span>
                         </div>
                         <div class="guestbook-text">
-                            <p>${SantizeResponses}</p>
+                            ${SantizeResponses}
                         </div>
                         <hr>
                     </div>
