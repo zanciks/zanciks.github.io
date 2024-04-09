@@ -32,6 +32,8 @@ function encodeHTML(santizedInput) {
 
 function submitForm() {
     var frm = document.getElementsByName('gform')[0];
+    var submissionText = document.getElementById('submittion-confirmation');
+    submissionText.innerHTML = "Thank you for your submittion! Please wait around 30 seconds and refresh the page to see it on the guestbook!"
     frm.submit(); 
     frm.reset(); 
     return false;
