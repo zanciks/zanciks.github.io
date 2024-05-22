@@ -1,38 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Zackary Semancik Portfolio</title>
+        <title>portfolio</title>
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../portfolio/theme.css">
-        <link rel="stylesheet" href="../portfolio/style.css">
-        <link rel="stylesheet" href="../portfolio/light.css">
     </head>
     <body>
-        <div class="light-container">
-            <div class="cable"></div>
-            <div class="connector">
-                <div class="grove"></div>
-                <div class="grove"></div>
-                <div class="grove"></div>
-            </div>
-                <button class="light" id="light-button">
-            </div>
+        <div class="projects">
+            <figure>
+                <div class="window">
+                    <div class="window-titlebar">Kernel</div>
+                    <div class="window-body">
+                        <a href="https://github.com/zanciks/zanciks-os">link</a>
+                        <span class="description">I am attempting to write a simple kernal and OS in Rust</span>
+                    </div>
+                </div>
+                <div class="window">
+                    <div class="window-titlebar">Chess Engine</div>
+                    <div class="window-body">
+                        <a href="https://github.com/zanciks/chess_engine">link</a>
+                        <span class="description">A traditional chess engine which uses negamax algorithms</span>
+                    </div>
+                </div>
+                <div class="window">
+                    <div class="window-titlebar">This Website!</div>
+                    <div class="window-body">
+                        <a href="https://github.com/zanciks/zanciks.github.io">repo link</a>
+                        <a href="../index.html">website link</a>
+                        <span class="description">This website was used as a learning experience for me to start understanding web dev principles!</span>
+                    </div>
+                </div>
+                <div class="window">
+                    <div class="window-titlebar">Othello Game Logic</div>
+                    <div class="window-body">
+                        <a href="https://github.com/zanciks/othello">link</a>
+                        <span class="description">A project where I am attempting to create an engine for othello, with its own move generation</span>
+                    </div>
+                </div>
+                <div class="window">
+                    <div class="window-titlebar">Conway's Game of Life</div>
+                    <div class="window-body">
+                        <a href="https://github.com/zanciks/conway_game_of_life">link</a>
+                        <span class="description">A very simple version of Conway's Game of Life, created in about two hours as a challenge!</span>
+                    </div>
+                </div>
+                <div class="window">
+                    <div class="window-titlebar">Dotfiles</div>
+                    <div class="window-body">
+                        <a href="https://github.com/zanciks/dotfiles">link</a>
+                        <span class="description">Dotfiles for my current personal linux rice, all together in one repository</span>
+                    </div>
+                </div>
+                <div class="window">
+                    <div class="window-titlebar">Many more to come!</div>
+                    <div class="window-body">
+                        I hope to create many new projects soon, and I am excited to share them all with you! However, as I have a dayjob, it does take me a bit longer to find the time to make all of the projects I'd like to do. If you're interested in helping in anyway, feel free to contact me at @zanciks on discord, or by leaving tickets on any of my github repositories!
+                    </div>
+                </div>
+            </figure>
+            <nav>
+                <button class="nav prev"> << </button>
+                <button class="nav next"> >> </button>
+            </nav>
         </div>
+        
+        <b>THIS PAGE IS IN PROGRESS! IT IS MISSING MANY THINGS, INCLUDING, BUT NOT LIMITED TO:</b>
+        <ul>
+            <li>themes</li>
+            <li>images for all of the cards</li>
+            <li>something fun to do on the page!</li>
+            <li>a way to contact me</li>
+        </ul>
 
-        <div class="project" id="chess-engine">
-            <h1 style="margin-bottom: 0">Chess Engine</h1>
-            <h4 style="margin-top: 0">programmed fully in Rust</h4>
-
-            <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M2 5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5C3.34315 22 2 20.6569 2 19V5ZM4 19V12H12V20H5C4.44772 20 4 19.5523 4 19ZM20 12H12V4H19C19.5523 4 20 4.44772 20 5V12Z" fill="var(--secondary-color)"/>
-            </svg>
-
-            <a href="https://github.com/zanciks/chess_engine/" class="project-link">link to project</a>
-        </div>
-
-
-        <script src="../portfolio/theme.js"></script>
+        <script src="scroll.js"></script>
     </body>
 </html>
 

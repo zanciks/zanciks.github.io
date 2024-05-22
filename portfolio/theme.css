@@ -1,52 +1,62 @@
-/* 
-    This is an edited version of ../home/theme.css made to match the needs of the portfolio
-*/
-
 :root {
-    --primary-color: white;
-    --secondary-color: black;
-    --theme: 0;
-}
-
-fieldset {
-    font-size: 16px;
-    padding: 0;
-    margin: 5px;
-    border: 1px solid var(--secondary-color);
+    --project-size: 350px;
 }
 
 body {
-    margin: 0;
+    background-color: white;
+    color: black;
+}
+
+.window, .window-titlebar, .window-body, .description {
+    font-size: 20px;
+}
+
+.projects {
+    perspective: var(--project-size);
+    overflow: hidden;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
 }
 
-a {
-    color: inherit;
-    text-decoration: underline
+figure {
+    width: var(--project-size);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
 }
 
-hr {
-    border-color: var(--secondary-color);
+.window {
+    height: var(--project-size);
+    width: var(--project-size);
+    background-color: white;
+    border: 1px solid black;
+    box-sizing: border-box;
+    text-align: center;
+    text-transform: lowercase;
+    &:not(:first-of-type) {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
 }
 
-button {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    border: 1px solid var(--secondary-color);
-    margin: 0px;
+.window-titlebar {
+    background-color: white;
+    border: 1px solid black;
+    margin: 5px;
+    margin-bottom: 0px;
+    text-align: center;
 }
 
-svg {
-    align-self: center;
-    max-width: 100%; 
-    height: auto; 
+.window-body {
+    background-color: white;
+    border: 1px solid black;
+    height: 88%;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
 }
 
-h4 {
-    font-size: 100%
+.description {
+    margin-top: auto;
 }
