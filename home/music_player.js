@@ -1,4 +1,5 @@
 const playlist = [
+    {title: 'The Orb of Dreamers - Daniel Pemberton', src: '../music/song 0.mp3'},
     {title: 'Clair de Lune - Claude Debussy', src: '../music/song 1.mp3'},
     {title: 'Merry Go Round of Life - Joe Hisaishi', src: '../music/song 2.mp3'},
     {title: 'Partita for Lute in C Minor, BWV 997, Prelude - J.S Bach', src: '../music/song 3.mp3'},
