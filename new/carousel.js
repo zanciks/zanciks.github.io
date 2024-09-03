@@ -52,8 +52,28 @@ function onNavClick(e) {
 
 function rotateCarousel(pageIndex) {
     // the normal JS modulo doesn't work for mod(negative, positive) so we use our own
-    var index = ((pageIndex % allPages.length) + allPages.length) % allPages.length; 
+    var index = mod(pageIndex, allPages.length);
     allPages[index].appendChild(jumps);
 
     figure.style.transform = `rotateY(${pageIndex * -theta}rad)`;
+}
+
+function mod(n, m) {
+    return ((n % m) + m) % m; 
+}
+
+function jump(targetIndex) {
+    rotateCarousel(pageIndex + wrapIndex(targetIndex));
+    pageIndex += wrapIndex(targetIndex);
+}
+
+function wrapIndex(targetIndex) {
+    var start = mod(pageIndex, allPages.length);
+    var target = mod(targetIndex, allPages.length);
+
+    var forwardDist = (target - start + allPages.length) % allPages.length;
+    var backwardDist = (start - target + allPages.length) % allPages.length;
+
+    if (forwardDist <= backwardDist) {return forwardDist}
+    else {return -backwardDist}
 }
