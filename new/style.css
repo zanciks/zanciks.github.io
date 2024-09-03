@@ -1,0 +1,78 @@
+:root {
+    --page-size: 70vh;
+}
+
+body {
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.content {
+    margin-top: 10vh;
+    perspective: var(--page-size);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+figure {
+    width: var(--page-size);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.page {
+    height: var(--page-size);
+    width: var(--page-size);
+    background-color: white;
+    border: 1px solid black;
+    box-sizing: border-box;
+    font-size: 20px;
+    align-items: center;
+}
+
+.page:not(:first-of-type) {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.page-title {
+    background-color: white;
+    border: 1px solid black;
+    margin: 5px;
+    text-align: center;
+}
+
+.page-body {
+    background-color: white;
+    border: 1px solid black;
+    height: calc(100% - 55px);
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.jump {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    text-align: center;
+    align-content: center;
+}
+
+.jump-buttons {
+    justify-self: center;
+    width: calc(var(--page-size) * 0.965);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#home-body, #navigation-body {
+    text-align: center;
+}

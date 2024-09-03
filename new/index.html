@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Website</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="content">
+
+            <div class="jump-buttons">
+                <button class="jump" onclick="rotateCarousel(0)">
+                    <img src="images/home.svg">
+                </button>
+                <button class="jump" onclick="rotateCarousel(1)">
+                    <img src="images/navigation.svg">
+                </button>
+                <button class="jump" onclick="rotateCarousel(6)">
+                    <img src="images/links.svg">
+                </button>
+                <button class="jump" onclick="rotateCarousel(5)">
+                    <img src="images/guestbook.svg">
+                </button>
+                <button class="jump" onclick="rotateCarousel(2)">
+                    <img src="images/music.svg">
+                </button>
+            </div>
+            
+            <nav>
+                <button class="nav prev"> << </button>
+                <button class="nav next"> >> </button>
+            </nav>
+
+            <figure>
+
+                <div class="page">
+                    <div class="page-title">Home</div>
+                    <div class="page-body" id="home-body">
+                        Welcome to the new zanciks.online! 
+                    </div>
+                </div>
+
+                <div class="page">
+                    <div class="page-title">Navigation</div>
+                    <div class="page-body" id="navigation-body">
+                        <a href="../toast">toast</a> <br>
+                    </div>
+                </div>
+
+                <div class="page">
+                    <div class="page-title">Music</div>
+                    <div class="page-body">
+                        Music player
+                    </div>
+                </div>
+
+                <div class="page">
+                    <div class="page-title">Content</div>
+                    <div class="page-body">
+                        To show stuff here, select something in the navigation page!
+                    </div>
+                </div>
+
+                <div class="page">
+                    <div class="page-title">About</div>
+                    <div class="page-body">
+                        About the webmaster/contact
+                    </div>
+                </div>
+
+                <div class="page">
+                    <div class="page-title">Guestbook</div>
+                    <div class="page-body">
+                        Guestbook stuff goes here
+                    </div>
+                </div>
+
+                <div class="page">
+                    <div class="page-title">Links</div>
+                    <div class="page-body">
+                        links and banners to other sites
+                    </div>
+                </div>
+
+            </figure>
+
+        </div>
+
+        <script src="carousel.js"></script>
+    </body>
+</html>
