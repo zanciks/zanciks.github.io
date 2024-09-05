@@ -23,6 +23,7 @@ function display(pages) {
 	});
 
 	nav.addEventListener('click', onNavClick, true);
+    
 }
 
 function setupCarousel(style) {
@@ -34,7 +35,10 @@ function setupCarousel(style) {
     for (i = 1; i < pageCount; i++) {
         allPages[i].style.transformOrigin = `50% 50% ${- apothem}px`;
         allPages[i].style.transform = `rotateY(${i * theta}rad)`;
+        allPages[i].appendChild(jumps.cloneNode(true));
     }
+
+    allPages[0].appendChild(jumps);
         
     rotateCarousel(pageIndex);
 }
@@ -51,20 +55,16 @@ function onNavClick(e) {
 }
 
 function rotateCarousel(pageIndex) {
-    // the normal JS modulo doesn't work for mod(negative, positive) so we use our own
-    var index = mod(pageIndex, allPages.length);
-    allPages[index].appendChild(jumps);
-
     figure.style.transform = `rotateY(${pageIndex * -theta}rad)`;
-}
-
-function mod(n, m) {
-    return ((n % m) + m) % m; 
 }
 
 function jump(targetIndex) {
     rotateCarousel(pageIndex + wrapIndex(targetIndex));
     pageIndex += wrapIndex(targetIndex);
+}
+
+function mod(n, m) {
+    return ((n % m) + m) % m; 
 }
 
 function wrapIndex(targetIndex) {
