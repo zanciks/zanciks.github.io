@@ -24,6 +24,10 @@ function display(pages) {
 
 	nav.addEventListener('click', onNavClick, true);
     
+    allPages[0].appendChild(jumps);
+    for (i = 1; i < pageCount; i++) {
+        allPages[i].appendChild(jumps.cloneNode(true));
+    }
 }
 
 function setupCarousel(style) {
@@ -35,10 +39,7 @@ function setupCarousel(style) {
     for (i = 1; i < pageCount; i++) {
         allPages[i].style.transformOrigin = `50% 50% ${- apothem}px`;
         allPages[i].style.transform = `rotateY(${i * theta}rad)`;
-        allPages[i].appendChild(jumps.cloneNode(true));
     }
-
-    allPages[0].appendChild(jumps);
         
     rotateCarousel(pageIndex);
 }

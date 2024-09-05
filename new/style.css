@@ -55,6 +55,7 @@ figure {
     display: flex;
     flex-direction: column;
     padding: 5px;
+    overflow-y: hidden;
 }
 
 .jump {
@@ -77,4 +78,65 @@ figure {
 
 #home-body, #navigation-body {
     text-align: center;
+}
+
+.nav {
+    margin-top: calc(0.1 * var(--page-size));
+}
+
+#guestbook-fields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-element {
+    width: 100%;
+    max-width: 400px;
+    resize: none;
+}
+
+#guestbook-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.guestbook {
+    max-height: calc(0.57 * var(--page-size));
+    overflow-y: scroll;
+}
+
+.guestbook-entry {
+    padding-right: 1%;
+}
+
+.guestbook-entry-info {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    margin: 0;
+}
+
+.guestbook-author {
+    text-align: left;
+    margin: 2px;
+    padding-top: 2px;
+    padding-bottom: 5px;
+}
+
+.guestbook-date {
+    text-align: right;
+    margin: 2px;
+    padding-top: 2px;
+    padding-bottom: 5px;
+}
+
+.guestbook-text {
+    text-align: left;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    margin: 0;
+    margin-top: 0;
 }

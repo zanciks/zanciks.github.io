@@ -24,11 +24,6 @@
                     <img src="images/music.svg">
                 </button>
             </div>
-            
-            <nav>
-                <button class="nav prev"> << </button>
-                <button class="nav next"> >> </button>
-            </nav>
 
             <figure>
 
@@ -76,8 +71,22 @@
 
                 <div class="page">
                     <div class="page-title">Guestbook</div>
-                    <div class="page-body">
-                        new signatures and reading old ones should both be on this page. considering switching to a server so the guestbook can be instant instead of waiting for google docs 
+                    <div class="page-body" id="guestbook-body">
+                        <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdBSJXJruGc53vYKuyR2qWrkYEozTPLl9vve4sGBq-5IXoyWA/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+                            <div id="guestbook-fields">
+                                <input class="form-element" type="text" name="entry.739506884" id="entry.739506884" placeholder="anon" required>
+                                <textarea class="form-element" name="entry.692672684" id="entry.692672684" maxlength="500" rows="10" cols="50" style="resize: none;" placeholder="entry here" required></textarea>
+                                <div id="guestbook-buttons">
+                                    <input type="button" class="form-button" value="submit" id="btnsubmit" onclick="submitForm()">
+                                    <input class="form-button" type="reset" value="reset form">
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div id="guestbook-json" class="guestbook"></div>
+
+                        </form>
                     </div>
                 </div>
 
@@ -90,8 +99,15 @@
 
             </figure>
 
+            <nav>
+                <button class="nav prev"> << </button>
+                <button class="nav next"> >> </button>
+            </nav>
+
+
         </div>
 
         <script src="carousel.js"></script>
+        <script src="guestbook.js"></script>
     </body>
 </html>
