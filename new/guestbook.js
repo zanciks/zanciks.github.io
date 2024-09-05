@@ -1,3 +1,5 @@
+var usedGuestbook = false;
+
 function fetchGuestBookEntries() {
     fetch(`https://opensheet.elk.sh/${"1xyGFGkOpqg69Lg9pDFDVLEJ3CyiTBFB3uGFa8bZO-ro"}/${"Form+Responses+1"}`)
         .then((res) => res.json())
@@ -31,12 +33,16 @@ function encodeHTML(santizedInput) {
 }
 
 function submitForm() {
-    var frm = document.getElementsByName('gform')[0];
-    var submissionText = document.getElementById('submittion-confirmation');
-    submissionText.innerHTML = "Thank you for your submittion! Please wait around 30 seconds and refresh the page to see it on the guestbook!"
-    frm.submit(); 
-    frm.reset(); 
-    return false;
+    if (!usedGuestbook) {
+        usedGuestbook = true;
+        var frm = document.getElementsByName('gform')[0];
+        var submissionText = document.getElementById('submittion-confirmation');
+        submissionText.innerHTML = "Thank you for your submittion! Please wait around 30 seconds and refresh the page to see it on the guestbook!"
+        frm.submit(); 
+        frm.reset(); 
+        return false;
+    }
+    
 }
 
 function toggleWindow() {
