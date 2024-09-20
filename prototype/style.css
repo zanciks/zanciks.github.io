@@ -1,0 +1,59 @@
+:root {
+    --card-size: min(70vw, 70vh);
+}
+
+body {
+    height: 95vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    perspective: var(--card-size);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+figure {
+    width: var(--card-size);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.card {
+    height: var(--card-size);
+    width: var(--card-size);
+    background-color: white;
+    border: 1px solid black;
+    box-sizing: border-box;
+    font-size: 20px;
+    align-items: center;
+}
+
+.card:not(:first-of-type) {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.card-title {
+    background-color: white;
+    border: 1px solid black;
+    margin: 5px;
+    text-align: center;
+}
+
+.card-body {
+    background-color: white;
+    border: 1px solid black;
+    height: calc(100% - 53px);
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    overflow-y: hidden;
+}
