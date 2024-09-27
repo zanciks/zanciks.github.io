@@ -1,0 +1,69 @@
+:root {
+    --card-size: min(70vw, 70vh);
+}
+
+body {
+    height: 95vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    perspective: var(--card-size);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+figure {
+    width: var(--card-size);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.card {
+    height: var(--card-size);
+    width: var(--card-size);
+    background-color: white;
+    border: 1px solid black;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+.card:not(:first-of-type) {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.card-body {
+    background-color: white;
+    border: 1px solid black;
+    /* height is 100% - 2(border) - 2(margin) - 2(padding) */
+    height: calc(100% - 22px);
+    margin: 5px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.rainbow-text {
+    background: linear-gradient(to right, red, orange , yellow, green, blue, purple);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow 5s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+
+@keyframes rainbow {
+    0%,100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+}

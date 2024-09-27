@@ -1,46 +1,62 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>My Website</title>
+        <title>Prototype</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="theme.css">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div class="content">
 
             <figure>
+                <div class="card" id="home-card">
+                    <div class="card-body" id="home-body">
+                        Warning! This website uses JavaScript for most of the content!
+                        <br> To view the page properly, you need to enable it!
+                    </div>
+                </div>
                 <div class="card">
-                    <div class="card-title">Card Example</div>
+                    <div class="card-body">
+                        Default Card!
+                    </div>
+                </div>
+
+                <div class="card" id="music-card">
+                    <div class="card-body" id="music-body">
+                        <div id="music-image">image</div>
+                        <div class="rainbow-text" id="music-welcome">zanciks.online music controller!</div>
+                        <div id="music-playing">currently playing song title</div>
+                        <div id="music-controls">
+                            <button> << </button>
+                            <button> || </button>
+                            <button> >> </button>
+                            <!-- add a button to enable controls at the bottom of the screen -->
+                            <progress max="100" value="75"></progress>
+                        </div>
+                        <div id="music-volume">
+                            <input id="music-volume-input" type="range" min="0" max="100" value="25" step="1">
+                        </div>
+                        <div id="music-playlist">playlist</div>
+                    </div>
+                </div>
+
+                <div class="card">
                     <div class="card-body">
                         Default Card!
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card-title">Card Example</div>
                     <div class="card-body">
                         Default Card!
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card-title">Card Example</div>
                     <div class="card-body">
                         Default Card!
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card-title">Card Example</div>
-                    <div class="card-body">
-                        Default Card!
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-title">Card Example</div>
-                    <div class="card-body">
-                        Default Card!
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-title">Card Example</div>
                     <div class="card-body">
                         Default Card!
                     </div>
