@@ -23,11 +23,12 @@ function display(cards) {
 	});
 
 	nav.addEventListener('click', onNavClick, true);
-    
+    /*
     allCards[0].appendChild(jumps);
     for (i = 1; i < cardCount; i++) {
         allCards[i].appendChild(jumps.cloneNode(true));
     }
+    */
 }
 
 function setupCarousel(style) {
@@ -57,24 +58,4 @@ function onNavClick(e) {
 
 function rotateCarousel(cardIndex) {
     figure.style.transform = `rotateY(${cardIndex * -theta}rad)`;
-}
-
-function jump(targetIndex) {
-    rotateCarousel(cardIndex + wrapIndex(targetIndex));
-    cardIndex += wrapIndex(targetIndex);
-}
-
-function mod(n, m) {
-    return ((n % m) + m) % m; 
-}
-
-function wrapIndex(targetIndex) {
-    var start = mod(cardIndex, allCards.length);
-    var target = mod(targetIndex, allCards.length);
-
-    var forwardDist = (target - start + allCards.length) % allCards.length;
-    var backwardDist = (start - target + allCards.length) % allCards.length;
-
-    if (forwardDist <= backwardDist) {return forwardDist}
-    else {return -backwardDist}
 }
