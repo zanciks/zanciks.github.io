@@ -11,42 +11,37 @@ var timePercentage = 100;
 
 const playlist = [
     { image: '../music/00/image.jpg', length: '2:30', title: 'The Orb of Dreamers', artist: 'Daniel Pemberton', source: '../music/00/source.mp3' },
-    { image: '../music/01/image.jpg', length: '1:43', title: 'Save the Cat (from The Bad Guys)', artist: 'Daniel Pemberton', source: '../music/01/source.mp3' },
+    { image: '../music/01/image.jpg', length: '1:43', title: 'Save the Cat', artist: 'Daniel Pemberton', source: '../music/01/source.mp3' },
     { image: '../music/02/image.jpg', length: '3:19', title: 'I\'ll Try Anything Once', artist: 'The Strokes', source: '../music/02/source.mp3' },
+    { image: '../music/03/image.jpg', length: '3:09', title: 'Paul (Big Thief Cover)', artist: 'Cavetown', source: '../music/03/source.mp3' },
+    { image: '../music/04/image.jpg', length: '3:24', title: 'Call it Fate, Call it Karma', artist: 'The Strokes', source: '../music/04/source.mp3' },
+    { image: '../music/05/image.jpg', length: '4:17', title: 'Postcards from Italy', artist: 'Beirut', source: '../music/05/source.mp3' },
 ]
 
 function togglePlay() {
 	if (musicPlayer.paused) {
 		musicPlayer.play();
-        musicPlaying.innerHTML = `${playlist[currentSongIndex].title} <b>|</b> ${playlist[currentSongIndex].artist}`;
 	} else {
 		musicPlayer.pause();
-        musicPlaying.innerHTML = `${playlist[currentSongIndex].title} <b>|</b> ${playlist[currentSongIndex].artist}`;
 	}
 }
 
 function previousSong() {
     if (timePercentage > 5) {
-        togglePlay();
-        musicPlayer.currentTime = 0;
-        togglePlay();
+        playSong(currentSongIndex);
         return;
     }
     currentSongIndex--;
     if (currentSongIndex < 0) { currentSongIndex = playlist.length - 1 }
-    musicImage.style.backgroundImage = `url(${playlist[currentSongIndex].image})`;
-    musicPlayer.src = playlist[currentSongIndex].source;
+    playSong(currentSongIndex);
     setPlaylistDisplay();
-    togglePlay();
 }
 
 function nextSong() {
     currentSongIndex++;
     if (currentSongIndex >= playlist.length) { currentSongIndex = 0 }
-    musicImage.style.backgroundImage = `url(${playlist[currentSongIndex].image})`;
-    musicPlayer.src = playlist[currentSongIndex].source;
+    playSong(currentSongIndex);
     setPlaylistDisplay();
-    togglePlay();
 }
 
 function setPlaylistDisplay() {
@@ -85,12 +80,13 @@ function setPlaylistDisplay() {
 }
 
 function playSong(index) {
-    togglePlay();
+    musicPlayer.pause();
     currentSongIndex = index;
+    musicPlaying.innerHTML = `${playlist[currentSongIndex].title} | ${playlist[currentSongIndex].artist}`;
     musicImage.style.backgroundImage = `url(${playlist[currentSongIndex].image})`;
     musicPlayer.src = playlist[currentSongIndex].source;
     setPlaylistDisplay();
-    togglePlay();
+    musicPlayer.play();
 }
 
 musicPlayer.addEventListener('timeupdate', () => {
@@ -105,9 +101,20 @@ volumeRange.addEventListener('input', () => {
     musicPlayer.volume = volume;
 });
 
+volumeRange.addEventListener("wheel", function(e) {
+    if (e.deltaY < 0) { volumeRange.valueAsNumber += 5 }
+    else { volumeRange.valueAsNumber -= 5 }
+    e.preventDefault();
+    e.stopPropagation();
+    const volume = volumeRange.value / 100;
+    musicPlayer.volume = volume;
+});
+
 musicPlayer.addEventListener('ended', () => {
     nextSong();
 });
 
-playSong(0);
+// we won't actually autoplay because the user hasn't interacted
+// so we're just using playSong(0) to set the song data!!
+playSong(0); 
 setPlaylistDisplay();
