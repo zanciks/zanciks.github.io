@@ -53,7 +53,24 @@
                 </div>
                 <div class="card">
                     <div class="card-body">
-                        Default Card!
+                            <div class="page-body" id="guestbook-body">
+                                <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdBSJXJruGc53vYKuyR2qWrkYEozTPLl9vve4sGBq-5IXoyWA/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+                                    <div id="guestbook-fields">
+                                        <input class="form-element" type="text" name="entry.739506884" id="entry.739506884" placeholder="anon" required>
+                                        <textarea class="form-element" name="entry.692672684" id="entry.692672684" maxlength="500" rows="10" cols="50" style="resize: none;" placeholder="entry here" required></textarea>
+                                        <div id="guestbook-buttons">
+                                            <input type="button" class="form-button" value="submit" id="btnsubmit" onclick="submitForm()">
+                                            <input class="form-button" type="reset" value="reset form">
+                                        </div>
+                                        <div id="submittion-confirmation"></div>
+                                    </div>
+
+                                    <hr>
+
+                                    <div id="guestbook-json" class="guestbook"></div>
+
+                                </form>
+                            </div>
                     </div>
                 </div>
                 <div class="card">
@@ -75,5 +92,6 @@
 
         <script src="scripts/carousel.js"></script>
         <script src="scripts/music.js"></script>
+        <script src="scripts/guestbook.js"></script>
     </body>
 </html>
